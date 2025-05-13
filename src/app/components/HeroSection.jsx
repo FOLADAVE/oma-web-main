@@ -4,14 +4,14 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
 const images = [
-  "/images/DSC_6546.jpg", // Replace with your image paths
-  "/images/DSC_6811.jpg",
-  "/images/DSC_6546.jpg",
-  "/images/DSC_6561.jpg",
-  "/images/DSC_6524[40].jpg",
-  "/images/DSC_6538.jpg",
-  "/images/DSC_6544.jpg",
-  "/images/DSC_6697.jpg",
+  "/images/DSC_6546.JPG", // Updated to uppercase
+  "/images/DSC_6811.JPG",
+  "/images/DSC_6546.JPG",
+  "/images/DSC_6561.JPG",
+  "/images/DSC_6524[40].JPG",
+  "/images/DSC_6538.JPG",
+  "/images/DSC_6544.JPG",
+  "/images/DSC_6697.JPG",
 ];
 
 const HeroSection = () => {
