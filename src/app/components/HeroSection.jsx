@@ -4,14 +4,14 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
 const images = [
-  "/images/DSC_6546.JPG", // Updated to uppercase
-  "/images/DSC_6811.JPG",
-  "/images/DSC_6546.JPG",
-  "/images/DSC_6561.JPG",
-  "/images/DSC_6524[40].JPG",
-  "/images/DSC_6538.JPG",
-  "/images/DSC_6544.JPG",
-  "/images/DSC_6697.JPG",
+  "/images/DSC_6546.jpg", // Updated to uppercase
+  "/images/DSC_6811.jpg",
+  "/images/DSC_6546.jpg",
+  "/images/DSC_6561.jpg",
+  "/images/DSC_6524[40].jpg",
+  "/images/DSC_6538.jpg",
+  "/images/DSC_6544.jpg",
+  "/images/DSC_6697.jpg",
 ];
 
 const HeroSection = () => {
@@ -38,7 +38,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="font-lato my-12 px-12" id="home">
+    <section className=" my-12 px-12" id="home">
       {/* Image Slider */}
       <div className="relative w-full h-64 md:h-96 overflow-hidden rounded-lg mb-8">
         {images.map((image, index) => (
@@ -73,7 +73,7 @@ const HeroSection = () => {
       {/* Hero Section Content */}
       <div className="grid grid-cols-1 md:grid-cols-12">
         <div className="col-span-7 place-self-center text-center sm:text-left">
-          <h1 className="font-lato text-customGrey mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+          <h1 className="text-customGrey mb-4 text-4xl sm:text-5xl lg:text-5xl font-bold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-indigo-950">
               Welcome to {""}
             </span>

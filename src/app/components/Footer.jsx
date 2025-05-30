@@ -1,35 +1,35 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link"; // Import Link from Next.js
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-gray-800 py-6 font-semibold">
-      <div className="container mx-auto">
+    <footer className="bg-gray-50 text-gray-800 py-10 font-medium">
+      <div className="container mx-auto px-6">
         {/* Divider */}
         <hr className="border-gray-300 mb-8" />
 
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           {/* Links Section */}
-          <div className="mb-4 md:mb-0">
-            <ul className="flex space-x-6 text-sm">
+          <div className="text-center md:text-left">
+            <ul className="flex flex-wrap justify-center md:justify-start space-x-6 text-sm">
               <li>
-                <Link href="/" className="hover:text-indigo-950">
+                <Link href="/" className="hover:text-indigo-600">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-indigo-950">
+                <Link href="/services" className="hover:text-indigo-600">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-indigo-950">
+                <Link href="/about" className="hover:text-indigo-600">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-indigo-950">
+                <Link href="/contact" className="hover:text-indigo-600">
                   Contact
                 </Link>
               </li>
@@ -37,15 +37,15 @@ const Footer = () => {
           </div>
 
           {/* Social Icons Section */}
-          <div className="flex space-x-4">
+          <div className="flex space-x-6">
             <a
               href="https://web.facebook.com/dictionandphonicsman"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-70"
+              className="hover:opacity-80"
             >
               <Image
-                src="/images/communication_15047527.png"
+                src="/images/facebook.png"
                 alt="Facebook"
                 width={30}
                 height={30}
@@ -55,10 +55,10 @@ const Footer = () => {
               href="mailto:partnerships@omadiction.pro"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-70"
+              className="hover:opacity-80"
             >
               <Image
-                src="/images/email_719662.png"
+                src="/images/email.png"
                 alt="Email"
                 width={30}
                 height={30}
@@ -68,10 +68,10 @@ const Footer = () => {
               href="https://www.youtube.com/@dictionoracle8254"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-70"
+              className="hover:opacity-80"
             >
               <Image
-                src="/images/youtube_255305.png"
+                src="/images/youtube.png"
                 alt="YouTube"
                 width={30}
                 height={30}
@@ -80,7 +80,7 @@ const Footer = () => {
           </div>
 
           {/* Copyright Section */}
-          <div className="text-sm mt-4 md:mt-0">
+          <div className="text-center text-sm">
             © {new Date().getFullYear()} Oma Diction. All rights reserved.
           </div>
         </div>

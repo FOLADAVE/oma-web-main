@@ -23,7 +23,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <link rel="icon" href="https://omadiction.pro/Screenshot_20231114_104326_Gallery-removebg.png" />
+        {/* Updated favicon link */}
+        <link rel="icon" href="/oma-logo.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

@@ -2,67 +2,78 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import MenuOverlay from "./MenuOverlay";
 
-// Updated paths for proper page navigation
 const navLinks = [
-  { title: "Home", path: "/" }, // Use `/` for home
-  { title: "About", path: "/about" }, // Navigate to the /about page
-  { title: "Services", path: "/services" }, // Navigate to the /services page
-  { title: "Contact", path: "/contact" }, // Navigate to the /contact page
+  { title: "Home", path: "/" },
+  { title: "About", path: "/about" },
+  { title: "Services", path: "/services" },
+  { title: "Contact", path: "/contact" },
 ];
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="bg-indigo-950 md:bg-indigo-950 lg:bg-customBlue">
-      <div className="mb-1 sm:mb-2 flex flex-wrap items-center justify-between mx-auto p-4 w-full">
+    <nav className="bg-indigo-950 md:bg-indigo-950 lg:bg-customBlue sticky top-0 z-50 shadow-md">
+      <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <Link href="/" className="pl-9">
+        <Link href="/" className="flex items-center">
           <Image
             src="/images/oma-logo.png"
-            alt="logo"
+            alt="Oma Logo"
             width={50}
             height={50}
+            className="mr-2"
           />
         </Link>
 
-        {/* Mobile Menu Toggle */}
-        <div className="mobile-menu block md:hidden">
-          {!navbarOpen ? (
-            <button
-              onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 border-2 border-white rounded text-white"
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.title}
+              href={link.path}
+              className="text-blue-900 font-bold hover:text-gray-300 transition-colors"
             >
-              <Bars3Icon className="h-5 w-5" />
-            </button>
-          ) : (
-            <button
-              onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 border-2 border-white rounded text-white"
-            >
-              <XMarkIcon className="h-5 w-5" />
-            </button>
-          )}
+              {link.title}
+            </Link>
+          ))}
         </div>
 
-        {/* Desktop Menu */}
-        <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0 z-50">
+        {/* Mobile Menu Toggle */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setNavbarOpen(!navbarOpen)}
+            className="text-white focus:outline-none"
+          >
+            {navbarOpen ? (
+              <XMarkIcon className="h-6 w-6" />
+            ) : (
+              <Bars3Icon className="h-6 w-6" />
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {navbarOpen && (
+        <div className="md:hidden bg-indigo-950">
+          <ul className="flex flex-col items-center space-y-4 py-4">
             {navLinks.map((link) => (
               <li key={link.title}>
-                <NavLink href={link.path} title={link.title} />
+                <Link
+                  href={link.path}
+                  className="text-white hover:text-gray-300 transition-colors"
+                  onClick={() => setNavbarOpen(false)} // Close menu on click
+                >
+                  {link.title}
+                </Link>
               </li>
             ))}
           </ul>
         </div>
-      </div>
-
-      {/* Mobile Overlay Menu */}
-      {navbarOpen && <MenuOverlay links={navLinks} />}
+      )}
     </nav>
   );
 };
