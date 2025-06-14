@@ -67,7 +67,7 @@ const ServicePage = () => {
             Features
           </h3>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2">
-            Our Features & Services
+            Our Services
           </h2>
           <p
             className="font-medium text-gray-200 mt-4 mx-auto"
