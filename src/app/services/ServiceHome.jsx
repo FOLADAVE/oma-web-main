@@ -63,9 +63,6 @@ const ServicePage = () => {
 
         {/* Content */}
         <div className="relative z-10 text-center px-4">
-          <h3 className="text-gray-300 uppercase tracking-wide text-sm md:text-base lg:text-lg">
-            Features
-          </h3>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2">
             Our Services
           </h2>
@@ -147,6 +144,26 @@ const ServicePage = () => {
     >
       The Diction Award celebrates excellence in linguistic expression, recognizing individuals who
       demonstrate exceptional mastery of spoken and written communication.
+    </p>
+  </div>
+
+  {/* Banner Image and Descriptive Text */}
+  <div className="text-center mb-12">
+    <Image
+      src="/images/diction-awards.jpg" // Replace with your actual image path
+      alt="Diction Award Show Banner"
+      width={600} // Reduced width
+      height={300} // Reduced height
+      className="mx-auto rounded-lg shadow-lg"
+    />
+    <p
+      className="text-gray-600 mt-4 leading-relaxed"
+      style={{
+        maxWidth: "700px",
+        margin: "0 auto",
+      }}
+    >
+      Here is the most recent Diction Award show, celebrating the achievements of outstanding individuals in the field of communication.
     </p>
   </div>
 

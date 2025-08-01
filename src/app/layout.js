@@ -23,8 +23,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Updated favicon link */}
-        <link rel="icon" href="/oma-logo.png" />
+        {/* Explicitly define your custom favicon */}
+        <link rel="icon" href="/images/oma-logo.png" type="image/png" sizes="32x32" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
