@@ -1,113 +1,75 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 
-const images = [
-  "/images/DSC_6546.JPG", // Updated to uppercase
-  "/images/DSC_6811.JPG",
-  "/images/DSC_6546.JPG",
-  "/images/DSC_6561.JPG",
-  "/images/DSC_6524[40].JPG",
-  "/images/DSC_6538.JPG",
-  "/images/DSC_6544.JPG",
-  "/images/DSC_6697.JPG",
+const services = [
+  { label: "Professional Diction", href: "/diction" },
+  { label: "Website Design", href: "/web-design" },
+  { label: "Mobile App Engineering", href: "/mobile-apps" },
+  { label: "Web Applications", href: "/web-apps" },
 ];
 
 const HeroSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Function to go to the next slide
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  // Function to go to the previous slide
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
-
-  // Automatically slide every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000); // 5 seconds
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, []);
-
   return (
-    <section className=" my-12 px-12" id="home">
-      {/* Image Slider */}
-      <div className="relative w-full h-64 md:h-96 overflow-hidden rounded-lg mb-8">
-        {images.map((image, index) => (
-          <Image
-            key={index}
-            src={image}
-            alt={`Slide ${index + 1}`}
-            layout="fill"
-           objectFit="cover" // Ensures the image fills the container
-      objectPosition="top"
-            className={`absolute transition-opacity duration-1000 ease-in-out ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
-        {/* Previous Button */}
-        <button
-          onClick={prevSlide}
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gradient-to-r from-indigo-600 to-blue-900 text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform"
-        >
-          &#8592;
-        </button>
-        {/* Next Button */}
-        <button
-          onClick={nextSlide}
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform"
-        >
-          &#8594;
-        </button>
-      </div>
-
-      {/* Hero Section Content */}
-      <div className="grid grid-cols-1 md:grid-cols-12">
-        <div className="col-span-7 place-self-center text-center sm:text-left">
-          <h1 className="text-customGrey mb-4 text-4xl sm:text-5xl lg:text-5xl font-bold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-indigo-950">
-              Welcome to {""}
-            </span>
-            <br />
+    <section className="bg-[#f6f9fc]" id="home">
+      <div className="max-w-6xl mx-auto px-6 py-16 md:py-24 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        {/* Left */}
+        <div className="col-span-7">
+          <p className="text-[#c9922a] font-semibold text-sm mb-3">
+            Welcome to Oma Services
+          </p>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1e2a5e] leading-tight mb-4">
             <TypeAnimation
               sequence={[
-                "The Diction Oracle website",
-                1000,
-                "OMA DICTION",
-                1000,
+                "Speak with clarity.",
+                1200,
+                "Build with purpose.",
+                1200,
+                "Grow with confidence.",
+                1200,
               ]}
               wrapper="span"
-              speed={200}
+              speed={50}
               repeat={Infinity}
             />
           </h1>
-          <p className="text-paragraphColor text-base sm:text-lg mb-6 lg:text-lg">
-            OMA is a place where we teach both young and old how to read, write,
-            and speak impeccable standard English.
+          <p className="text-[#425466] text-base sm:text-lg mb-8 max-w-lg leading-relaxed">
+            From world-class diction training to cutting-edge digital products —
+            Oma Services helps individuals and organisations communicate better and build smarter.
           </p>
-          <div>
+
+          {/* Service pills */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            {services.map((s) => (
+              <Link
+                key={s.href}
+                href={s.href}
+                className="px-4 py-2 rounded-full border border-[#1e2a5e] text-[#1e2a5e] text-sm font-medium hover:bg-[#1e2a5e] hover:text-white transition-colors"
+              >
+                {s.label}
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex gap-3 flex-wrap">
             <a href="mailto:partnerships@omadiction.pro">
-              <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-blue-600 hover:to-indigo-600 text-white font-semibold shadow-lg transition-all">
-                Contact Us
+              <button className="px-6 py-3 rounded-lg bg-[#1e2a5e] text-white font-semibold hover:bg-[#162050] transition-colors">
+                Start a project
               </button>
             </a>
-            <a href="#services">
-              <button className="px-6 py-3 w-full sm:w-fit rounded-full font-semibold bg-transparent hover:bg-rose-800 hover:text-white text-indigo-950 border-2 border-rose-800 mt-3 shadow-lg transition-all">
-                Our Services
+            <Link href="/services">
+              <button className="px-6 py-3 rounded-lg border-2 border-[#c9922a] text-[#c9922a] font-semibold hover:bg-[#c9922a] hover:text-white transition-colors">
+                See all services
               </button>
-            </a>
+            </Link>
           </div>
         </div>
-        <div className="col-span-5 place-self-center mt-4 lg:mt-0">
+
+        {/* Right */}
+        <div className="col-span-5 flex justify-center">
+          <div className="col-span-5 place-self-center mt-4 lg:mt-0">
           <div className="rounded-full bg-indigo-950 border-rose-900 border-8 w-[340px] h-[340px] lg:w-[380px] lg:h-[380px] relative items-center justify-center animate-bounce-slow max-920:animate-pulse-slow">
             <Image
               src="/images/oma-hero.png"
@@ -117,6 +79,7 @@ const HeroSection = () => {
               height={310}
             />
           </div>
+        </div>
         </div>
       </div>
     </section>

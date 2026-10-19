@@ -19,10 +19,10 @@ const ContactUs = () => {
           <div className="lg:w-1/2 space-y-8">
             <h3 className="text-2xl font-semibold text-gray-800">Get in Touch</h3>
             <p className="text-gray-600 leading-relaxed">
-              Thank you for your interest in OMA DICTION. We are here to assist
+              Thank you for your interest in Oma Services. We are here to assist
               you and provide the information you need. Whether you have questions
-              about our programs, want to inquire about enrollment, or have
-              general inquiries, we&apos;re just a message away.
+              about our diction programmes, digital services, or want to discuss a project,
+              we&apos;re just a message away.
             </p>
             <ul className="space-y-4">
               <li className="flex items-center gap-4">

@@ -1,6 +1,10 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
+import {
+  EnvelopeIcon,
+  PlayCircleIcon,
+  UserGroupIcon,
+} from "@heroicons/react/24/outline";
 
 const Footer = () => {
   return (
@@ -42,40 +46,26 @@ const Footer = () => {
               href="https://web.facebook.com/dictionandphonicsman"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-80"
+              aria-label="Facebook"
+              className="text-[#1e2a5e] hover:text-[#c9922a] transition-colors"
             >
-              <Image
-                src="/images/facebook.png"
-                alt="Facebook"
-                width={30}
-                height={30}
-              />
+              <UserGroupIcon aria-hidden="true" className="h-7 w-7" />
             </a>
             <a
               href="mailto:partnerships@omadiction.pro"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-80"
+              aria-label="Email Oma Diction"
+              className="text-[#1e2a5e] hover:text-[#c9922a] transition-colors"
             >
-              <Image
-                src="/images/email.png"
-                alt="Email"
-                width={30}
-                height={30}
-              />
+              <EnvelopeIcon aria-hidden="true" className="h-7 w-7" />
             </a>
             <a
               href="https://www.youtube.com/@dictionoracle8254"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:opacity-80"
+              aria-label="YouTube"
+              className="text-[#1e2a5e] hover:text-[#c9922a] transition-colors"
             >
-              <Image
-                src="/images/youtube.png"
-                alt="YouTube"
-                width={30}
-                height={30}
-              />
+              <PlayCircleIcon aria-hidden="true" className="h-7 w-7" />
             </a>
           </div>
 

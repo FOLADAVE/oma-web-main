@@ -15,9 +15,9 @@ const AboutPage = () => {
             Our Dream is <br /> Global Learning <br /> Transformation
           </h1>
           <p className="text-gray-600 mt-4 leading-relaxed">
-          At OMA, we are dedicated to fostering effective communication skills through the art of diction and language proficiency. 
-          Our passion for education spans generations, as we empower both young minds and seasoned learners in their journey
-           to master the art of language.
+          At Oma Services, we help individuals and organisations communicate better and build smarter.
+          From diction training and speech therapy to websites, mobile apps, and custom web platforms —
+          we bring expertise, creativity, and a genuine commitment to results.
           </p>
         </div>
 
@@ -61,10 +61,10 @@ const AboutPage = () => {
   OMA&apos;s Mission
   </span>
   <h2 className="text-4xl font-bold text-indigo-600 mt-4">
-  English Mastery
+  Our Mission
   </h2>
   <p className="text-lg text-gray-600 max-w-2xl mt-4">
-  We equip individuals with top-tier English skills, ensuring effective communication for success.
+  To empower individuals and organisations with world-class communication skills and purpose-built digital solutions — helping them speak with clarity, build with purpose, and grow with confidence.
   </p>
   <div className="mt-8 w-full max-w-4xl">
     <Image

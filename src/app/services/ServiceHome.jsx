@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   {
@@ -64,7 +65,7 @@ const ServicePage = () => {
         {/* Content */}
         <div className="relative z-10 text-center px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2">
-            Our Services
+            Oma Services
           </h2>
           <p
             className="font-medium text-gray-200 mt-4 mx-auto"
@@ -73,8 +74,14 @@ const ServicePage = () => {
               lineHeight: "1.8",
             }}
           >
-            Welcome to our comprehensive range of services designed to meet your diverse needs. Explore our services below and discover how we can elevate your expectations.
+            From world-class diction training to cutting-edge digital products — explore our full range of services below.
           </p>
+          <div className="flex flex-wrap justify-center gap-3 mt-6">
+            <Link href="/diction" className="px-5 py-2 rounded-full bg-white/20 hover:bg-white/30 text-white text-sm font-medium transition-colors">Professional Diction</Link>
+            <Link href="/web-design" className="px-5 py-2 rounded-full bg-white/20 hover:bg-white/30 text-white text-sm font-medium transition-colors">Website Design</Link>
+            <Link href="/mobile-apps" className="px-5 py-2 rounded-full bg-white/20 hover:bg-white/30 text-white text-sm font-medium transition-colors">Mobile Apps</Link>
+            <Link href="/web-apps" className="px-5 py-2 rounded-full bg-white/20 hover:bg-white/30 text-white text-sm font-medium transition-colors">Web Applications</Link>
+          </div>
         </div>
       </section>
 

@@ -26,17 +26,16 @@ const About = () => {
               About us
             </span>
             <h2 className="my-4 font-bold text-3xl sm:text-4xl">
-              About <span className="text-indigo-600">OMA DICTION</span>
+              About <span className="text-indigo-600">Oma Services</span>
             </h2>
             <p className="text-gray-700">
-              At OMA DICTION, we are dedicated to fostering effective communication skills
-              through the art of diction and language proficiency. Our passion for education spans
-              generations, as we empower both young minds and seasoned learners in their journey to master
-              the art of language.
+              At Oma Services, we are dedicated to helping individuals and organisations communicate better
+              and build smarter. From world-class diction training to cutting-edge digital products, our
+              passion for excellence spans every service we offer.
             </p>
             <p className="text-gray-700 mt-2">
-            Our vision at OMA Diction is to be a globally recognized leader in language education,
-            setting the standard for excellence in communication skills.
+              Our vision is to be a globally recognised leader in communication and digital services —
+              setting the standard for quality, impact, and results across Nigeria and beyond.
             </p>
           </div>
         </div>
